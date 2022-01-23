@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { Request, Response } from "express";
 
 import { TurnUserAdminUseCase } from "./TurnUserAdminUseCase";
@@ -17,7 +16,7 @@ class TurnUserAdminController {
     
       return response.status(200).json(user);
     }catch(error){
-      return response.status(404).json(error);
+      return response.status(404).json({error: error});
     }
     
   }
